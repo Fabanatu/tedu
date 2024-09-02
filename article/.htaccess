@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect requests to /article/read/xxx to single.php
+RewriteRule ^read/(.*)$ single.php?content=$1 [L,QSA]
+
+# Redirect requests to /article/view/xxx to index.php
+RewriteRule ^view/(.*)$ index.php?client=$1 [L,QSA]
+
+# Redirect requests to /article/view/xxx to index.php
+RewriteRule ^auth/(.*)$ login.php?client=$1 [L,QSA]

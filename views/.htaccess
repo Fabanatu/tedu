@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Redirect all requests in /views/* to a single PHP file, e.g., index.php
+RewriteRule ^([^/]+)/?$ index.php?client=$1 [L,QSA]
